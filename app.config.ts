@@ -4,7 +4,7 @@ import type { ExpoConfig } from 'expo/config';
 //   EAS_PROJECT_ID       - from `eas init`
 //   GOOGLE_MAPS_API_KEY  - Android Maps SDK key
 //   GOOGLE_SERVICES_JSON - path to google-services.json (EAS file secret) for FCM push
-const projectId = process.env.EAS_PROJECT_ID;
+const projectId = process.env.EAS_PROJECT_ID ?? '56e36786-d5ac-441a-834d-052c8fbefdb1';
 const mapsKey = process.env.GOOGLE_MAPS_API_KEY;
 const googleServices = process.env.GOOGLE_SERVICES_JSON;
 
@@ -28,7 +28,7 @@ const config: ExpoConfig = {
     package: 'app.helpawy.circle',
     versionCode: 1,
     adaptiveIcon: {
-      backgroundColor: '#E6F4FE',
+      backgroundColor: '#D92D20',
       foregroundImage: './assets/android-icon-foreground.png',
       backgroundImage: './assets/android-icon-background.png',
       monochromeImage: './assets/android-icon-monochrome.png',
