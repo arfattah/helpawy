@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pdf.ahmedreda.online/sitemap.xml
