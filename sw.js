@@ -1,6 +1,6 @@
 // Offline support: serves the app's own files from a local cache. It never contacts other hosts.
-const CACHE = 'pdfdesk-v2';
-const FILES = ['./', './index.html', './app.js', './app.css', './pdf.worker.min.js', './manifest.webmanifest', './icon.svg'];
+const CACHE = 'pdfdesk-v3';
+const FILES = ['./', './index.html', './app.js', './app.css', './pdf.worker.min.js', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', (e) => {
